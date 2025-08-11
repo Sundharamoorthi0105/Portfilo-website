@@ -1,6 +1,7 @@
-/* Projects Section */
+/* =========================
+   Filters Section
+========================= */
 .filters {
-    /* Layout */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -9,40 +10,34 @@
 }
 
 .filter-btn {
-    /* Layout */
     padding: 10px 25px;
-    /* Box Model */
     background-color: var(--card-bg);
     border: 1px solid var(--primary-accent);
     border-radius: 5px;
-    /* Typography */
     color: var(--primary-accent);
     font-weight: 500;
     text-transform: capitalize;
-    font-family: 'Roboto', sans-serif; 
-    /* Visual */
+    font-family: 'Roboto', sans-serif;
     cursor: pointer;
     transition: all var(--transition-speed);
 }
 
 .filter-btn:hover {
-    /* Box Model */
     background-color: var(--primary-accent);
-    /* Typography */
-    color: var(--bg-dark); 
+    color: var(--bg-dark);
 }
 
 .filter-btn.active {
-    /* Box Model */
     background-color: var(--primary-accent);
     border-color: var(--primary-accent);
-    box-shadow: 0 3px 10px rgba(233, 30, 99, 0.2); 
-    /* Typography */
-    color: var(--bg-dark); 
+    box-shadow: 0 3px 10px rgba(233, 30, 99, 0.2);
+    color: var(--bg-dark);
 }
 
+/* =========================
+   Projects Grid Layout
+========================= */
 .projects-grid {
-    /* Layout */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -52,136 +47,102 @@
 }
 
 .project-card {
-    /* Layout */
     position: relative;
-    /* Box Model */
     background-color: var(--card-bg);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px var(--dark-shadow); 
+    box-shadow: 0 4px 15px var(--dark-shadow);
     border: 1px solid var(--border-color);
-    /* Typography */
-    color: var(--text-light); 
-    /* Visual */
+    color: var(--text-light);
     transition: transform var(--transition-speed), box-shadow var(--transition-speed), opacity var(--transition-speed);
 }
 
 .project-card.hidden {
-    /* Layout */
-    display: none; 
+    display: none;
 }
 
 .project-card img {
-    /* Layout */
     width: 100%;
     height: 200px;
-    /* Visual */
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
 .project-card:hover img {
-    /* Visual */
     transform: scale(1.05);
 }
 
+/* =========================
+   Project Info
+========================= */
 .project-info {
-    /* Layout */
     padding: 25px;
-    /* Visual */
     text-align: left;
 }
 
 .project-info h3 {
-    /* Layout */
     margin-bottom: 10px;
-    /* Typography */
     font-size: 1.5em;
-    color: var(--text-light); 
-    font-family: 'Inter', sans-serif; 
+    color: var(--text-light);
+    font-family: 'Inter', sans-serif;
 }
 
 .project-info .tools-used {
-    /* Layout */
     margin-bottom: 15px;
-    /* Typography */
     font-size: 0.9em;
     color: var(--primary-accent);
     font-weight: 500;
 }
 
 .project-info p {
-    /* Layout */
     margin-bottom: 20px;
-    /* Typography */
     font-size: 1em;
-    color: var(--text-grey); 
+    color: var(--text-grey);
 }
 
-.read-more-btn {
-    /* Layout */
-    padding: 10px 20px;
-    /* Box Model */
-    background-color: var(--primary-accent);
-    border: none;
-    border-radius: 5px;
-    /* Typography */
-    color: var(--bg-dark); 
-    font-weight: 600;
-    text-transform: uppercase;
-    /* Visual */
-    cursor: pointer;
-    transition: all var(--transition-speed);
-}
-
-.read-more-btn:hover {
-    /* Box Model */
-    background-color: #FF4081; 
-    box-shadow: 0 2px 10px rgba(233, 30, 99, 0.2); 
-    /* Visual */
-    transform: translateY(-2px);
-    
-}
+/* =========================
+   Buttons
+========================= */
 .project-buttons {
     display: flex;
-    justify-content: space-between; /* space between buttons */
-    gap: 10px; /* space between them */
-    margin-top: 15px;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto; /* keeps buttons at bottom if card grows */
 }
 
-.read-more-btn,
-.view-code-btn {
-    flex: 1; /* both buttons equal width */
+.view-dashboard-btn,
+.download-btn {
+    flex: 1;
     padding: 10px 20px;
+    font-size: 14px; /* You can reduce this */
     text-align: center;
     border-radius: 5px;
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
     transition: all var(--transition-speed);
+    text-decoration: none; /* remove link underline */
 }
 
-/* Read More Button Style */
-.read-more-btn {
+/* View Dashboard */
+.view-dashboard-btn {
     background-color: var(--primary-accent);
     color: var(--bg-dark);
     border: none;
 }
-.read-more-btn:hover {
+.view-dashboard-btn:hover {
     background-color: #ff4081;
     transform: translateY(-2px);
 }
 
-/* View Code Button Style */
-.view-code-btn {
+/* Download */
+.download-btn {
     background-color: transparent;
     color: var(--primary-accent);
     border: 1px solid var(--primary-accent);
-    text-decoration: none; /* remove underline */
 }
-.view-code-btn:hover {
+.download-btn:hover {
     background-color: var(--primary-accent);
     color: var(--bg-dark);
     transform: translateY(-2px);
 }
-
