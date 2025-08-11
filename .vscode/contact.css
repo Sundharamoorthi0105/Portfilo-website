@@ -1,0 +1,133 @@
+
+/* Contact Section */
+.contact-container {
+    /* Layout */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.contact-form {
+    /* Layout */
+    flex: 1 1 450px;
+    max-width: 500px;
+    padding: 40px;
+    /* Box Model */
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--dark-shadow); 
+    /* Typography */
+    color: var(--text-light); 
+    /* Visual */
+    text-align: left;
+}
+
+.form-group {
+    /* Layout */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    /* Layout */
+    display: block;
+    margin-bottom: 8px;
+    /* Typography */
+    font-weight: 500;
+    color: var(--text-light); 
+}
+
+.form-group input,
+.form-group textarea {
+    /* Layout */
+    width: 100%;
+    padding: 12px;
+    /* Box Model */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    background-color: #222222; /* Slightly lighter dark for inputs */
+    /* Typography */
+    color: var(--text-light); 
+    font-size: 1em;
+    /* Visual */
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    /* Box Model */
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.1); 
+    /* Visual */
+    outline: none;
+}
+
+.contact-form .primary-btn {
+    /* Layout */
+    width: 100%;
+    padding: 15px;
+    /* Typography */
+    font-size: 1.1em;
+}
+
+.contact-info {
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    gap: 25px;
+    padding: 40px;
+    /* Box Model */
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--dark-shadow); 
+    /* Visual */
+    text-align: left;
+}
+
+.contact-icon-link {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    /* Typography */
+    color: var(--text-light); 
+    font-size: 1.1em;
+    /* Visual */
+    transition: color var(--transition-speed);
+}
+
+.contact-icon-link .icon {
+    /* Layout */
+    margin-right: 15px;
+    /* Typography */
+    font-size: 1.5em;
+    color: var(--primary-accent);
+    /* Visual */
+    transition: transform var(--transition-speed);
+}
+
+.contact-icon-link:hover {
+    /* Typography */
+    color: var(--primary-accent);
+}
+
+.contact-icon-link:hover .icon {
+    /* Visual */
+    transform: scale(1.1);
+}
+
+.developer-quote p {
+    /* Layout */
+    margin-top: 20px;
+    max-width: 600px;
+    /* Typography */
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+}
+

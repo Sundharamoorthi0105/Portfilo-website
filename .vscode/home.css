@@ -1,0 +1,128 @@
+/* Hero Section (Home) */
+.hero {
+    /* Layout */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 80px; 
+    /* Box Model */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.transparenttextures.com/patterns/connected-dots.png') no-repeat center center/cover;
+    background-size: cover; 
+    background-position: center; 
+    /* Typography */
+    color: var(--text-light); /* Light text for hero content */
+    /* Visual */
+    text-align: center;
+}
+
+.hero-content {
+    /* Layout */
+    max-width: 900px;
+    padding: 20px;
+}
+
+.profile-pic {
+    /* Layout */
+    width: 180px;
+    height: 180px;
+    margin-bottom: 30px;
+    /* Box Model */
+    border-radius: 50%;
+    border: 5px solid var(--primary-accent); /* Border uses accent color */
+    /* Visual */
+    object-fit: scale-down;
+    object-fit: cover;
+    object-fit: inherit;
+    animation: fadeInScale 1s ease-out;
+}
+
+.hero h1 {
+    /* Layout */
+    margin-bottom: 20px;
+    /* Typography */
+    font-size: 3.5em;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    /* Visual */
+    animation: slideInUp 1s ease-out;
+}
+
+.hero p {
+    /* Layout */
+    margin-bottom: 40px;
+    /* Typography */
+    font-size: 1.3em;
+    color: var(--text-grey); /* Secondary text is light grey */
+    /* Visual */
+    animation: fadeIn 1.5s ease-out;
+}
+
+.hero-ctas {
+    /* Layout */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    /* Layout */
+    display: inline-block;
+    padding: 15px 30px;
+    /* Box Model */
+    border-radius: 5px;
+    border: 2px solid;
+    /* Typography */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif; 
+    /* Visual */
+    transition: all var(--transition-speed);
+}
+
+.primary-btn {
+    /* Box Model */
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    /* Typography */
+    color: var(--bg-dark); /* Text color for primary button is dark */
+}
+
+.primary-btn:hover {
+    /* Box Model */
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3); /* Shadow uses accent color */
+    /* Typography */
+    color: var(--primary-accent);
+    /* Visual */
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    /* Box Model */
+    background-color: transparent;
+    border-color: var(--primary-accent);
+    /* Typography */
+    color: var(--primary-accent);
+}
+
+.secondary-btn:hover {
+    /* Box Model */
+    background-color: var(--primary-accent);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3); /* Shadow uses accent color */
+    /* Typography */
+    color: var(--bg-dark); /* Text color for secondary button on hover is dark */
+    /* Visual */
+    transform: translateY(-3px);
+}
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}

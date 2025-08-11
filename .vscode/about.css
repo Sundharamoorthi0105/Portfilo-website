@@ -1,0 +1,45 @@
+/* About Section */
+.about-content {
+    /* Layout */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Visual */
+    text-align: left;
+}
+
+.about-content p {
+    /* Layout */
+    margin-bottom: 25px;
+    /* Typography */
+    font-size: 1.1em;
+    color: var(--text-grey);
+}
+
+.education {
+    /* Layout */
+    margin-top: 30px;
+    padding: 30px;
+    /* Box Model */
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--dark-shadow); 
+    /* Typography */
+    color: var(--text-light); 
+}
+
+.education h3 {
+    /* Layout */
+    margin-bottom: 15px;
+    /* Typography */
+    color: var(--primary-accent);
+    font-size: 1.6em;
+}
+
+.education p {
+    /* Layout */
+    margin-bottom: 10px;
+    /* Typography */
+    color: var(--text-light); 
+}
