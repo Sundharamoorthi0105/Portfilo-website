@@ -142,3 +142,46 @@
     transform: translateY(-2px);
     
 }
+.project-buttons {
+    display: flex;
+    justify-content: space-between; /* space between buttons */
+    gap: 10px; /* space between them */
+    margin-top: 15px;
+}
+
+.read-more-btn,
+.view-code-btn {
+    flex: 1; /* both buttons equal width */
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+}
+
+/* Read More Button Style */
+.read-more-btn {
+    background-color: var(--primary-accent);
+    color: var(--bg-dark);
+    border: none;
+}
+.read-more-btn:hover {
+    background-color: #ff4081;
+    transform: translateY(-2px);
+}
+
+/* View Code Button Style */
+.view-code-btn {
+    background-color: transparent;
+    color: var(--primary-accent);
+    border: 1px solid var(--primary-accent);
+    text-decoration: none; /* remove underline */
+}
+.view-code-btn:hover {
+    background-color: var(--primary-accent);
+    color: var(--bg-dark);
+    transform: translateY(-2px);
+}
+
