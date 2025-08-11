@@ -127,13 +127,12 @@ ul {
 }
 
 .logo {
-    /* Typography */
-    font-family: 'Orbitron', sans-serif; /* Kept Orbitron for the logo */
-    font-size: 1.8em;
-    font-weight: bold; /* Made the logo text bold */
-    color: var(--primary-accent); /* Logo text uses accent color */
-    letter-spacing: 1px;
+   
+ font-family: "Oleo Script Swash Caps", system-ui;
+  font-weight: 400;
+  font-style: large;
 }
+
 
 .nav-links {
     /* Layout */

@@ -1,3 +1,4 @@
+
 // Global variables
 let currentEffect = 'line'; // 'line' or 'circle'
 let canvas, ctx;
@@ -21,7 +22,7 @@ let circleParams = {
   maxRadius: 15,
   minRadius: 1,
   fadeSpeed: 0.1,
-  followSpeed: 0.4
+  followSpeed: 0.85 // was 0.4 → now much faster
 };
 
 window.onload = function() {
@@ -66,7 +67,7 @@ function showTempCircle() {
   // Show circle cursor
   setEffect('circle');
   
-  // After 2 seconds, revert
+  // After 1 second, revert
   tempCircleTimeout = setTimeout(() => {
     if (currentEffect === 'circle') {
       setEffect(previousEffect);
@@ -131,7 +132,7 @@ Line.prototype.draw = function() {
     let d = (this.nodes[i].y + this.nodes[i + 1].y) / 2;
     ctx.quadraticCurveTo(this.nodes[i].x, this.nodes[i].y, c, d);
   }
-  ctx.strokeStyle = "rgba(158, 213, 31, 0.2)"; // green tone
+  ctx.strokeStyle = "rgba(158, 213, 31, 0.2)";
   ctx.lineWidth = 1;
   ctx.stroke();
   ctx.closePath();
@@ -181,14 +182,13 @@ function drawCircles() {
     let circle = circles[i];
     ctx.beginPath();
     ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(158, 213, 31, ${circle.alpha * 0.3})`; // green trail
+    ctx.fillStyle = `rgba(158, 213, 31, ${circle.alpha * 0.3})`;
     ctx.fill();
   }
   
-  // Main cursor dot
   ctx.beginPath();
   ctx.arc(pos.x, pos.y, 2, 0, Math.PI * 2);
-  ctx.fillStyle = "#9ed51f"; // solid green
+  ctx.fillStyle = "#9ed51f";
   ctx.fill();
 }
 
@@ -225,19 +225,21 @@ function render() {
   
   requestAnimationFrame(render);
 }
-// Select the button
-const button = document.querySelector("#myButton");
 
-// When button is clicked → temporarily show circle effect
-button.addEventListener("click", () => {
-    showTempCircle(); // Use your existing function to switch to circle
-});
-// Create the circle cursor element
+// Optional: link to a button
+const button = document.querySelector("#myButton");
+if (button) {
+  button.addEventListener("click", () => {
+    showTempCircle();
+  });
+}
+
+// Create the circle element
 const circle = document.createElement('div');
-circle.style.width = '20px';
-circle.style.height = '20px';
-circle.style.border = '2px solid red';
-circle.style.borderRadius = '50%';
+circle.style.width = '15px';          // fixed size
+circle.style.height = '15px';
+circle.style.border = '2px solid #9ed51f'; // green outline
+circle.style.borderRadius = '50%';    // makes it round
 circle.style.position = 'fixed';
 circle.style.pointerEvents = 'none';
 circle.style.zIndex = '9999';
@@ -247,10 +249,9 @@ document.body.appendChild(circle);
 // Hide the default cursor
 document.body.style.cursor = 'none';
 
-// Move the circle to follow the mouse
+// Follow the mouse
 document.addEventListener('mousemove', (e) => {
     circle.style.left = `${e.clientX}px`;
     circle.style.top = `${e.clientY}px`;
 });
-
 
