@@ -234,24 +234,20 @@ if (button) {
   });
 }
 
-// Create the circle element
-const circle = document.createElement('div');
-circle.style.width = '15px';          // fixed size
-circle.style.height = '15px';
-circle.style.border = '2px solid #9ed51f'; // green outline
-circle.style.borderRadius = '50%';    // makes it round
-circle.style.position = 'fixed';
-circle.style.pointerEvents = 'none';
-circle.style.zIndex = '9999';
-circle.style.transform = 'translate(-50%, -50%)';
-document.body.appendChild(circle);
+ // Create the medium circle cursor div
+  const circle = document.createElement('div');
+  circle.style.width = '22px';       // Medium size
+  circle.style.height = '22px';
+  circle.style.border = '2px solid #9ed51f';
+  circle.style.borderRadius = '50%';
+  circle.style.position = 'fixed';
+  circle.style.pointerEvents = 'none';
+  circle.style.zIndex = '9999';
+  circle.style.transform = 'translate(-50%, -50%)';
+  document.body.appendChild(circle);
 
-// Hide the default cursor
-document.body.style.cursor = 'none';
-
-// Follow the mouse
-document.addEventListener('mousemove', (e) => {
+  // Update circle position on mouse move
+  document.addEventListener('mousemove', e => {
     circle.style.left = `${e.clientX}px`;
     circle.style.top = `${e.clientY}px`;
-});
-
+  });
