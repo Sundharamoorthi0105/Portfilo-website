@@ -22,14 +22,13 @@ let circleParams = {
   maxRadius: 15,
   minRadius: 1,
   fadeSpeed: 0.1,
-  followSpeed: 0.85 // was 0.4 → now much faster
+  followSpeed: 0.4 // was 0.4 → now much faster
 };
 
 window.onload = function() {
   // Initialize canvas
   canvas = document.createElement('canvas');
   document.body.appendChild(canvas);
-  ctx = canvas.getContext("2d");
   
   // Set canvas styles
   canvas.style.position = 'fixed';
@@ -234,20 +233,26 @@ if (button) {
   });
 }
 
- // Create the medium circle cursor div
-  const circle = document.createElement('div');
-  circle.style.width = '22px';       // Medium size
-  circle.style.height = '22px';
-  circle.style.border = '2px solid #9ed51f';
-  circle.style.borderRadius = '50%';
-  circle.style.position = 'fixed';
-  circle.style.pointerEvents = 'none';
-  circle.style.zIndex = '9999';
-  circle.style.transform = 'translate(-50%, -50%)';
-  document.body.appendChild(circle);
+// Hide the default cursor
+document.body.style.cursor = 'none';
 
-  // Update circle position on mouse move
-  document.addEventListener('mousemove', e => {
-    circle.style.left = `${e.clientX}px`;
-    circle.style.top = `${e.clientY}px`;
-  });
+// Create the large circle cursor div
+const largeCircle = document.createElement('div');
+largeCircle.style.width = '60px';               // Large size
+largeCircle.style.height = '60px';
+largeCircle.style.border = '3px solid #9ed51f'; // Thicker border
+largeCircle.style.borderRadius = '50%';
+largeCircle.style.position = 'fixed';
+largeCircle.style.pointerEvents = 'none';
+largeCircle.style.zIndex = '9999';
+largeCircle.style.transform = 'translate(-50%, -50%)';
+largeCircle.style.transition = 'transform 0.1s ease-out';
+largeCircle.style.boxShadow = '0 0 12px #9ed51f'; // Glow effect
+largeCircle.style.backgroundColor = 'rgba(158, 213, 31, 0.1)'; // Soft fill
+document.body.appendChild(largeCircle);
+
+// Update circle position on mouse move
+document.addEventListener('mousemove', e => {
+  largeCircle.style.left = `${e.clientX}px`;
+  largeCircle.style.top = `${e.clientY}px`;
+});
