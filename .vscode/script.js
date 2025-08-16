@@ -197,13 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Form submitted:', { name, email, message });
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
+            
         });
     }
 });
-
-
-function sendMail(){
-    let parms = {
-          
-    }
-}

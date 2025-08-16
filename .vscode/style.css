@@ -549,3 +549,32 @@ footer {
   max-width: 800px; /* Optional: Limit width for better readability */
   margin: 0 auto;   /* Centers the paragraph block horizontally */
 }
+/* Title hover effects */
+.project-info h3 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    padding-bottom: 5px;
+}
+
+.title-hover-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #9ed51f;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.project-info h3:hover {
+    color: #9ed51f;
+}
+
+/* Optional: Add a subtle scale effect */
+.project-card:hover .project-info h3 {
+    transform: translateX(5px);
+    transition: transform 0.3s ease;
+}

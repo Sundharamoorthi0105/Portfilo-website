@@ -20,9 +20,9 @@ let circles = [];
 let circleParams = {
   circleCount: 12,
   maxRadius: 15,
-  minRadius: 1,
-  fadeSpeed: 0.1,
-  followSpeed: 0.4 // was 0.4 → now much faster
+  minRadius: 0,
+  fadeSpeed: 0.0,
+  followSpeed: 0.2 // was 0.4 → now much faster
 };
 
 window.onload = function() {
