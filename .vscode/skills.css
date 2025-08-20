@@ -3,6 +3,7 @@
     /* Layout */
     display: flex;
     flex-wrap: wrap;
+     grid-template-columns: repeat(1, 6fr); /* 🔹 Always 6 per row */
     justify-content: center;
     gap: 50px;
     max-width: 900px;
