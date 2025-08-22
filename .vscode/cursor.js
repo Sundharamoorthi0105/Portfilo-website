@@ -236,23 +236,23 @@ if (button) {
 // Hide the default cursor
 document.body.style.cursor = 'none';
 
-// Create the large circle cursor div
-const largeCircle = document.createElement('div');
-largeCircle.style.width = '60px';               // Large size
-largeCircle.style.height = '60px';
-largeCircle.style.border = '3px solid #9ed51f'; // Thicker border
-largeCircle.style.borderRadius = '50%';
-largeCircle.style.position = 'fixed';
-largeCircle.style.pointerEvents = 'none';
-largeCircle.style.zIndex = '9999';
-largeCircle.style.transform = 'translate(-50%, -50%)';
-largeCircle.style.transition = 'transform 0.1s ease-out';
-largeCircle.style.boxShadow = '0 0 12px #9ed51f'; // Glow effect
-largeCircle.style.backgroundColor = 'rgba(158, 213, 31, 0.1)'; // Soft fill
-document.body.appendChild(largeCircle);
+// Create the medium circle cursor div
+const mediumCircle = document.createElement('div');
+mediumCircle.style.width = '35px';               // Medium size
+mediumCircle.style.height = '35px';
+mediumCircle.style.border = '2px solid #9ed51f'; // Thinner border
+mediumCircle.style.borderRadius = '50%';
+mediumCircle.style.position = 'fixed';
+mediumCircle.style.pointerEvents = 'none';
+mediumCircle.style.zIndex = '9999';
+mediumCircle.style.transform = 'translate(-50%, -50%)';
+mediumCircle.style.transition = 'transform 0.12s ease-out';
+mediumCircle.style.boxShadow = '0 0 8px #9ed51f'; // Softer glow
+mediumCircle.style.backgroundColor = 'rgba(158, 213, 31, 0.08)'; // Subtle fill
+document.body.appendChild(mediumCircle);
 
 // Update circle position on mouse move
 document.addEventListener('mousemove', e => {
-  largeCircle.style.left = `${e.clientX}px`;
-  largeCircle.style.top = `${e.clientY}px`;
+  mediumCircle.style.left = `${e.clientX}px`;
+  mediumCircle.style.top = `${e.clientY}px`;
 });

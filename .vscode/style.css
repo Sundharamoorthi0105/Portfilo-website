@@ -49,6 +49,7 @@ a:hover {
 }
 
 ul {
+    
     list-style: none;
 }
 
@@ -129,8 +130,8 @@ ul {
 .logo {
    
  font-family: "Oleo Script Swash Caps", system-ui;
-  font-weight: 400;
-  font-style: large;
+  font-weight: 1100;
+  font-style: bold;
 }
 
 
